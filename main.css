@@ -92,11 +92,12 @@ a:hover {
 	width: min-content;
 	/* max-width: /; */
 	margin: 1rem auto;
+	margin-bottom: 1.5rem;
 	font-family: degular-display;
 	font-size: clamp(3rem, 18vw, 6rem);
 	font-style: italic;
 	font-weight: 800;
-	line-height: .8;
+	line-height: .75;
 	text-align: left;
 }
 #masthead::before {
@@ -156,7 +157,7 @@ td {
 td:first-child {
 	/* font-variation-settings: "wght" 600, "opsz" 10; */
 	padding-right: .5rem;
-	min-width: 20ch;
+	min-width: calc(300px - 2rem);
 }
 td:nth-child(2) {
 	border-left: 1px solid var(--fg);
@@ -199,6 +200,9 @@ hr {
 #footer {
 	padding: 1rem;
 	text-align: center;
+}
+#footer .banner {
+	margin-bottom: .5rem;
 }
 #footer .banner::before {
 	transform: rotate(1deg);

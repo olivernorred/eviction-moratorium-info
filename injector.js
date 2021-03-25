@@ -11,10 +11,10 @@ fetch("links.csv")
 		lines.shift()
 
 		// Make the single-word lines only the word (headers)
-		for (let i = 0; i < lines.length; i++) {
-			lines[i] = lines[i].replaceAll(",,", "")
-			console.log(lines[i]);
-		}
+		lines.forEach((l, i) => {
+			lines[i] = l.replace(/,\s*$/, "")
+			lines[i] = lines[i].replace("www.", "")
+		})
 
 		// For each line, if there's only one item (headers like "News"),
 			// 1. close the table
@@ -33,8 +33,8 @@ fetch("links.csv")
 			else {
 				row = 
 				`<tr>
-				<td><a href="${col[2]}">${col[1]}</a></td>
-					<td><code>${col[0]}</code></td>
+				<td><a href="${col[1]}">${col[0]}</a></td>
+					<td><code>${getHostname(col[1])}</code></td>
 				</tr>`
 			}
 
@@ -51,3 +51,10 @@ fetch("links.csv")
 		// Put the table into the "generated"
 		document.querySelector("#linklist").innerHTML = injection
 	})
+
+
+// Function for extracting hostname from url
+const getHostname = (url) => {
+	// use URL constructor and return hostname
+	return new URL(url).hostname;
+}
