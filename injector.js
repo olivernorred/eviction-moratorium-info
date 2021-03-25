@@ -27,7 +27,7 @@ fetch("links.csv")
 			let row;
 			if(col.length === 1) {
 				row = `</table>
-				<h2>${col[0]}</h2>
+				<h2 class="banner">${col[0]}</h2>
 				<table>`
 			}
 			else {

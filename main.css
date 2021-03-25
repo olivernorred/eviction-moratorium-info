@@ -115,7 +115,7 @@ a:hover {
 .banner::before {
 	content: "";
 	position: absolute;
-	top: -2px; left: -3px;
+	top: -2px; left: -4px;
 	width: 100%; height: 100%;
 	padding: 3px;
 	background: var(--fg);
@@ -123,6 +123,9 @@ a:hover {
 	z-index: -1;
 	transform: rotate(-1deg);
 	box-shadow: .33rem .33rem var(--acolor);
+}
+.banner:nth-of-type(even)::before {
+	transform: rotate(1.5deg);
 }
 
 #content {
@@ -187,7 +190,8 @@ hr {
 
 #content h2 {
 	margin: 1rem 0;
-	margin-bottom: .2rem;
+	margin-bottom: .25rem;
+	padding: 0 .1rem;
 	font-weight: 400;
 }
 
