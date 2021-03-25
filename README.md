@@ -6,4 +6,4 @@ When contributing links to the `links.csv` table, take care to write `&comma;` i
 
 If anything is confusing in the header description or link names, create an issue or pull request. Thanks!
 
-Please contribute art for the header or something! A vector illustration of apartment buildings could be *sick*.
+Please contribute art for the header or footer! A vector illustration of apartment buildings could be *sick*.
