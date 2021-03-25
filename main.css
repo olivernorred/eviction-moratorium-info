@@ -157,7 +157,7 @@ td {
 td:first-child {
 	/* font-variation-settings: "wght" 600, "opsz" 10; */
 	padding-right: .5rem;
-	min-width: calc(300px - 2rem);
+	min-width: calc(320px - 2rem);
 }
 td:nth-child(2) {
 	border-left: 1px solid var(--fg);
